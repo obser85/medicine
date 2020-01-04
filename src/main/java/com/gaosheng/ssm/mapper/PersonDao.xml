@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+"-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.gaosheng.ssm.mapper.PersonDao">
+	<resultMap type="com.gaosheng.ssm.domain.Person" id="aa">
+		<result column="id" property="id" javaType="int"/>
+		<result column="name" property="name" javaType="String"/>
+		<result column="age" property="age" javaType="int"/>
+		<result column="photo_path" property="photoPath" javaType="String"/>
+	</resultMap>
+	
+	<select id="findById" parameterType="int" resultMap="aa">
+		select * from person where id=#{id}
+	</select>
+</mapper>
