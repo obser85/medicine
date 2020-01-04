@@ -17,5 +17,6 @@ public class TestController {
 		System.out.println("in this method");
 		service.test();
 		System.out.println("aaaaaaaaaaaaaaaa");
+		System.out.println("bbbbbbbbb");
 	}
 }
